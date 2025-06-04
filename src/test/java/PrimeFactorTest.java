@@ -10,7 +10,7 @@ class PrimeFactorTest {
     private PrimeFactor primeFactor;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws Exception {
         primeFactor = new PrimeFactor();
     }
 
@@ -22,5 +22,10 @@ class PrimeFactorTest {
     @Test
     public void testPrimeFactorOf2() {
         assertEquals(Arrays.asList(2), primeFactor.of(2));
+    }
+
+    @Test
+    public void testPrimeFactorOf3() {
+        assertEquals(Arrays.asList(3), primeFactor.of(3));
     }
 }
